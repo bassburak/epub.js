@@ -61,7 +61,8 @@ EPUBJS.Hooks.register("beforeChapterDisplay").endnotes = function(callback, rend
 
 					renderer.render.document.body.appendChild(popups[id]);
 					
-					//-- TODO: will these leak memory? - Fred 
+					//-- TODO: will these leak memory? - Fred
+
 					popups[id].addEventListener("mouseover", onPop, false);
 					popups[id].addEventListener("mouseout", offPop, false);
 

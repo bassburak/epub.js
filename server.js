@@ -9,7 +9,7 @@ var port = argv.p,
 	log = console.log;
 
 if (!argv.p) {
-	portfinder.basePort = 8080;
+	portfinder.basePort = 8181;
 	portfinder.getPort(function (err, port) {
 	if (err) throw err;
 	listen(port);
@@ -21,6 +21,8 @@ if (!argv.p) {
 
 
 function listen(port) {
+
+
 	var server = connect();
 		server.use(connect.static(__dirname))
 		
